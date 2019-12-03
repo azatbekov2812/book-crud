@@ -12,3 +12,11 @@ spring.jpa.hibernate.ddl-auto=update
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect
 spring.h2.console.enabled=true
 ```
+#Usages
+
+Run main function
+or
+run this command in the command line:
+```
+mvn spring-boot:run
+```
