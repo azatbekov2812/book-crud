@@ -12,7 +12,7 @@ spring.jpa.hibernate.ddl-auto=update
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect
 spring.h2.console.enabled=true
 ```
-#Usages
+# Usages
 
 Run main function
 or
