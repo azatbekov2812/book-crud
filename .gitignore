@@ -29,3 +29,15 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+### Java artifacts ###
+*.jar
+*.war
+*.ear
+*.class
+
+### IntelliJ IDEA ###
+.idea
+build
+classes
