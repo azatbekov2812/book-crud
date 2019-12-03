@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Spring Boot Exemple</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <div> <!--th:if="${not #lists.isEmpty(products)}">-->
+        <h2>Book List</h2>
+        <span th:text="${error?.error}" style="color: red"></span>
+        <table class="table table-striped">
+            <tr>
+                <th>Автор</th>
+                <th>Книга</th>
+                <th>Издатель</th>
+                <th>Цена</th>
+                <th>Описание</th>
+                <th>Просмотр</th>
+                <th>Добавить автора</th>
+            </tr>
+            <th:block th:each="bookDto : ${bookDtos}">
+                <tr th:each="author : ${bookDto.authorDto}">
+                    <td th:text="${author.authorName}"></td>
+                    <td th:text="${bookDto.bookName}"></td>
+                    <td th:text="${bookDto.publisherName}"></td>
+                    <td th:text="${bookDto.price}"></td>
+                    <td th:text="${bookDto.description}"></td>
+                    <td><a th:href="${'/author/' + author.id + '/book/' + bookDto.bookName}">Просмотр</a></td>
+                    <td><a th:href="${'/book/edit/' + bookDto.id}">Добавить автора к книге</a></td>
+                </tr>
+            </th:block>
+        </table>
+
+    </div>
+</div>
+
+</body>
+</html>

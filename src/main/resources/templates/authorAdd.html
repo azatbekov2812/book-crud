@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Book Example</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+
+    <h2>Добавить автора</h2>
+    <div>
+        <form class="form-horizontal" method="get" action="/save-author">
+            <div class="form-group">
+                <label class="col-sm-2 control-label" >Имя автора</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="authorName"/>
+                </div>
+            </div>
+            <div class="row">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+            <span th:text="${error?.error}" style="color: red"></span>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
